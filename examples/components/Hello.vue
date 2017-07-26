@@ -19,7 +19,7 @@
         <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
       </ul>
     </div>
-    <hello></hello>
+    <hello title="我是第一个组件"></hello>
   </div>
 
 </template>

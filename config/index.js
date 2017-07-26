@@ -35,7 +35,7 @@ module.exports = {
     // just be aware of this issue when enabling this option.
     cssSourceMap: false
   },
-  examplesDev:{
+  examplesDev: {
     env: require('./examples.dev.env'),
     port: 8080,
     autoOpenBrowser: true,
@@ -48,5 +48,13 @@ module.exports = {
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
     cssSourceMap: false
+  },
+  buildProdLib: {
+    env: require('./prod.lib.env.js'),
+    assetsRoot: path.resolve(__dirname, '../lib'),
+    assetsPublicPath: '/lib/',
+    filename:'vueComponentsLib.min.js',
+    library:'vueComponentsLib',
+    bundleAnalyzerReport: process.env.npm_config_report
   }
 }

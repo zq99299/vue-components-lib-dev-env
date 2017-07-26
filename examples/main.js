@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueComponentsLib from '../src/index'
+// import VueComponentsLib from '../src/index'
+import VueComponentsLib from '../lib/vueComponentsLib.min.js'
 
 Vue.use(VueComponentsLib)
 Vue.config.productionTip = false
