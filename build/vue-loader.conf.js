@@ -9,6 +9,7 @@ module.exports = {
       : config.dev.cssSourceMap,
     extract: isProduction
   }),
+  // 这里是对标签的src属性进行转换
   transformToRequire: {
     video: 'src',
     source: 'src',
