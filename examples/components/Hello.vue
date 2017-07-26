@@ -19,13 +19,13 @@
         <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
       </ul>
     </div>
+    <hello></hello>
   </div>
 
 </template>
 
 <script>
 export default {
-  name: 'hello',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
