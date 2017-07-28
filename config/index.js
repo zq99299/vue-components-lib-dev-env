@@ -53,8 +53,19 @@ module.exports = {
     env: require('./prod.lib.env.js'),
     assetsRoot: path.resolve(__dirname, '../lib'),
     assetsPublicPath: '/lib/',
-    filename:'vueComponentsLib.min.js',
-    library:'vueComponentsLib',
+    filename: 'vueComponentsLib.min.js',
+    library: 'vueComponentsLib',
     bundleAnalyzerReport: process.env.npm_config_report
+  },
+  buildStyl: {
+    // 要打包的源文件
+    source: path.resolve(__dirname, '../src/styl/index.styl'),
+    // 字体文件目录
+    sourceFonts:path.resolve(__dirname, '../src/styl/fonts/*.*'),
+    // 输出目录
+    output: path.resolve(__dirname, '../lib/styl/'),
+    outputFonts: path.resolve(__dirname, '../lib/styl/fonts'),
+    // 输出文件名称
+    filename: 'vueComponentsLib.min.css'
   }
 }

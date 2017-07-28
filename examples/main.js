@@ -3,6 +3,7 @@ import App from './App'
 import router from './router'
 // import VueComponentsLib from '../src/index'
 import VueComponentsLib from '../lib/vueComponentsLib.min.js'
+import '../lib/styl/vueComponentsLib.min.css'
 
 Vue.use(VueComponentsLib)
 Vue.config.productionTip = false
