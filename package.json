@@ -4,6 +4,7 @@
   "description": "vue组件库开发环境搭建种子dmeo",
   "author": "zhuqiang <99299684@qq.com>",
   "private": true,
+  "main": "lib/vueComponentsLib.min.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "dev:examples": "node build/dev-examples-server.js",
