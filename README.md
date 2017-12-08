@@ -28,3 +28,9 @@ https://zq99299.gitbooks.io/gitbook-guide/content/chapter/node_npm.html#如果�
 > **第一个练手组件库：**
 https://www.npmjs.com/package/tlz-vue-components-lib
 由于是公司内部项目，所以这里没有源代码公开
+
+## 入口命令
+
+* dev:examples 开发环境下运行
+* build:prodLib 组件打包成js
+* build:prodStyl css打包
