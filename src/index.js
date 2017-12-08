@@ -20,7 +20,10 @@ let VueComponentsLib = {
 
 const install = function (Vue, opts = {}) {
   Object.keys(VueComponentsLib).forEach((key) => {
-    Vue.component(key, VueComponentsLib[key])
+    if (key !== 'install') {
+      var component = VueComponentsLib[key]
+      Vue.component(component.name, component)
+    }
   })
 }
 
