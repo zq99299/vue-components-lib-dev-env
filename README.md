@@ -19,8 +19,12 @@
 
 以上几点明白了。就可以尝试搭建了;
 
-搭建过程请参考:
+> **搭建过程请参考:**
 https://zq99299.gitbooks.io/vue-note/content/chapter/vu_components_lib/
 
-npm相关请参考：
+> **npm相关请参考：**
 https://zq99299.gitbooks.io/gitbook-guide/content/chapter/node_npm.html#如果出现命令无效
+
+> **第一个练手组件库：**
+https://www.npmjs.com/package/tlz-vue-components-lib
+由于是公司内部项目，所以这里没有源代码公开
