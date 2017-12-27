@@ -34,3 +34,8 @@ https://www.npmjs.com/package/tlz-vue-components-lib
 * dev:examples 开发环境下运行
 * build:prodLib 组件打包成js
 * build:prodStyl css打包
+
+## 更新记录
+
+### 0.0.5 - 2017-12-27
+在 build/buildProdLib.js 中增加copy src/utils 目录的功能，把一些常用的封装好的工具类打包发布
