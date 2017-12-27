@@ -9,12 +9,16 @@ var path = require('path')
 var chalk = require('chalk')
 var webpack = require('webpack')
 var config = require('../config')
+var fs = require('fs-extra');
 // 这里同理复制一份 webpack.prod.conf.js 修改成 webpack.prodLib.conf.js
 var webpackConfig = require('./webpack.prodLib.conf')
 
 var spinner = ora('building for production...')
 spinner.start()
 
+function copy(from, to) {
+  fs.copySync(from, to);
+}
 // 也就是说，这里帮我们清理了以下目录
 // 然而这里我们只需要清空自己的打包目录就行了
 // 之前在config/index.js中没有定义多的变量，在这里要用到了，需要添加上
@@ -31,7 +35,10 @@ rm(path.join(config.buildProdLib.assetsRoot), err => {
       chunks: false,
       chunkModules: false
     }) + '\n\n')
-
+    // copy utils 到lib下
+    var from = path.resolve(__dirname, '../src/utils')
+    var to = path.resolve(__dirname, '../lib/utils')
+    copy(from,to)
     console.log(chalk.cyan('  Build complete.\n'))
     console.log(chalk.yellow(
       '  Tip: 构建的文件是js库的文件\n' +
