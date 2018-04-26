@@ -35,6 +35,25 @@ https://www.npmjs.com/package/tlz-vue-components-lib
 * build:prodLib 组件打包成js
 * build:prodStyl css打包
 
+## 关于工具类打包问题
+
+在实际使用过程中；我把写好的工具类放在`src/utils`中，在打包组件的时候并没有对该文件夹下的文件做任何的操作
+在vue全家桶项目中使用的时候，打包会出现以下的错误
+```
+ERROR in static/js/vendor.054b63dba333824e79d5.js from UglifyJs
+Unexpected token: name (AxiosHttp) [./~/vue-components-lib/lib/utils/http/AxiosHttp.js:18,0][static/js/vendor.054b63dba333824e79d5.js:13109,6]
+```
+ 该错误的原因是：可能需要用babel进行打包转换才能直接使用；在这个版本中，我还不知道怎么去使用babel；
+ 临时的解决方案：在vue-cli项目中babel配置的地方，加上该工具类的目录，让vue-cli打包的时候进行转换;
+ 有会的朋友欢迎提交pr；
+ ```
+  {
+         test: /\.js$/,
+         loader: 'babel-loader',
+         include: [resolve('src'), resolve('test'),resolve('node_modules/vue-components-lib/lib/utils')]
+       },
+ ```
+
 ## 更新记录
 
 ### 0.0.5 - 2017-12-27
